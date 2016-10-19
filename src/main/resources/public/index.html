@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hello Message</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body ng-app="hello" ng-cloak class="ng-cloak" ng-controller="AppController">
+<div class="container" style="margin-top: 30px">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">StackOverflow sites</div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>icon</th>
+                            <th>id</th>
+                            <th>website</th>
+                            <th>title</th>
+                            <th>description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in websites">
+                            <td><img ng-src="{{item.iconImageUrl}}"></td>
+                            <td>{{item.id}}</td>
+                            <td>{{item.website}}</td>
+                            <td>{{item.title}}</td>
+                            <td>{{item.description}}</td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/angular.min.js" type="text/javascript"></script>
+<script src="js/hello.js" type="text/javascript"></script>
+</body>
+</html>
